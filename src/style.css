@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #0a0a0afa, #2e3948);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-grid {
+    padding: 0;
+    width: 420px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.011);
+    border: 2px solid #414347;
+    border-radius: 16px;
+    box-shadow: 0px 3px 15px rgba(90, 93, 99, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.t-calc {
+    font-size: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    text-shadow: 3px 4px 3px rgb(0, 0, 0);
+}
+
+
+.one-two {
+    height: auto;
+    width: auto;
+    padding-top: 14px;
+    padding-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    border: 3px solid rgba(3, 3, 3, 0.566);
+    border-radius: 10px;
+}
+
+.pop-msg {
+    position: absolute;
+    width: 148px;
+    top: 25px;  /* Upar uthega calculator se */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4444;
+    color: white;
+    font-family: cursive;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    z-index: 10;
+
+    animation: fadeInOut 1.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+    }
+}
+
+
+.display-box {
+    justify-self: center;
+    align-self: center;
+}
+
+.display-no {
+    height: 60px;
+    width: 320px;
+    background-color: transparent;
+    box-shadow: 0px 0px 15px rgba(9, 10, 14, 0.678);
+    border-radius: 10px;
+    border: none;
+    font-size: 40px;
+    text-align: right;
+    color: white;
+    padding: 0;
+    padding-right: 10px;
+}
+
+.all-buttons {
+    width: 360px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: repeat(5, 80px);
+}
+
+button {
+    padding: 0;
+    transition: transform 0.3s ease;
+    height: 60px;
+    width: 60px;
+    border-radius: 18px;
+    margin: auto;
+    border: none;
+    background: rgba(255, 255, 255, 0.021);
+    color: white;
+    font-size: 25px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.751);
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.89);
+}
+
+button:hover{
+    background-color: rgba(17, 16, 16, 0.021);
+}
+
+.equal-to {
+    background-color: #fb7c14;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.858);
+}
+
+.equal-to:hover{
+    background-color: #ff7300;
+}
+.equal-to:active {
+    transform: scale(1.1);
+    background-color: #f46e00;
+}
+
+.del-but {
+    color: rgb(252, 36, 36);
+}
+
+.del-but:active {
+    transform: scale(0.95);
+    background-color: rgb(221, 0, 0);
+    color: white;
+}
+
+.ac {
+    color: #6dee0a;
+}
+
+.ac:active {
+    color: white;
+    background-color: #459f00;
+    ;
+
+}
+
+.operators {
+    color: #6dee0a;
+}
